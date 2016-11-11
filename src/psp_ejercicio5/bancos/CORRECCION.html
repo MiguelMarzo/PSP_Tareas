@@ -1,0 +1,38 @@
+<p>
+CLASES
+    CLIENTE extends thread
+        -Attr: Name
+        -run():
+            10 extracciones
+            10 depositos
+    BANKACC
+        -Attr: Salario
+        -method1: Deposito
+        -method2: TakeOut
+        -methodextra: showBalance
+    
+    MAIN
+        ->Llamar a cliente.run()
+        
+public syncrhonize void Deposit(int amount) {
+    1.acquire();
+    2.balance = balance + amount;
+    3.release();
+
+public syncrhonize boolean TakeOut(int amount) {
+    1.acquire();
+    2.if (amount <= balance) {
+        balance = balance -amount;
+    } else {
+        return false;
+    }
+    3.release();
+    4.return true;
+
+
+
+
+
+
+</p>
+
